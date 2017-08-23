@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    This layout defines the main activity screen and displays a list of students (if they exist),
+    and a floating action button that launches another activity.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <include android:id="@+id/toolbar"
+       layout="@layout/toolbar"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        app:fabSize="normal"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_send_white_36dp"
+        android:scaleType="center"
+        android:tint="@android:color/white"/>
+
+    <!-- RecyclerView that is responsible for holding a list of student data -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewStudents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="8dp"/>
+
+    <!-- Floating action button that launches AddStudentActivity when clicked -->
+
+</FrameLayout>
+
+
+    <!--    app:srcCompat="@android:drawable/ic_input_add"-->
